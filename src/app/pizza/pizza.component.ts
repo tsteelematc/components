@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { PizzaService } from '../pizza.service';
+
+interface PizzaToppingDisplay {
+  name: string;
+  price: number;
+  checked: boolean;
+}
 
 @Component({
   selector: 'app-pizza',
@@ -7,9 +14,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PizzaComponent implements OnInit {
 
-  constructor() { }
+  constructor(public pizzaSvc: PizzaService) { }
+  
+  availableToppings: PizzaToppingDisplay[];
 
   ngOnInit() {
+    this.availableToppings = this.pizzaSvc.loadPizzaToppings();
   }
 
 }
