@@ -15,7 +15,7 @@ interface PizzaToppingDisplay {
 export class PizzaComponent implements OnInit {
 
   constructor(public pizzaSvc: PizzaService) { }
-  
+
   availableToppings: PizzaToppingDisplay[];
   total = 0;
 
