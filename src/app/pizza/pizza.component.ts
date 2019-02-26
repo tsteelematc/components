@@ -17,9 +17,18 @@ export class PizzaComponent implements OnInit {
   constructor(public pizzaSvc: PizzaService) { }
   
   availableToppings: PizzaToppingDisplay[];
+  total = 0;
 
   ngOnInit() {
     this.availableToppings = this.pizzaSvc.loadPizzaToppings();
   }
 
+  calculateTotal() {
+    this.total = this.availableToppings
+      .filter(x => x.checked)
+      .reduce(
+        (acc, x) => acc + x.price
+        , 0
+      );
+  }
 }

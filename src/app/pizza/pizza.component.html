@@ -3,4 +3,8 @@
     <input type="checkbox" [(ngModel)]='t.checked'>
     {{ t.name }} ({{ t.price | currency }})
   </p>
+  <p>
+    <button (click)='calculateTotal()'>Calculate Total</button>
+  </p>
+  <h3>Total: {{ total | currency }}</h3>
 </div>
