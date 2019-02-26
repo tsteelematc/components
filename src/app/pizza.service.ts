@@ -13,6 +13,6 @@ export class PizzaService {
       , { name: 'Olives', price: 2.50 }
     ];
 
-    return toppingsFromWebService.map(x => ({...x, checked: false}));
+    return toppingsFromWebService.map(x => ({ ...x, checked: false }));
   }
 }
