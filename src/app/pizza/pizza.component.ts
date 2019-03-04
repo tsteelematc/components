@@ -18,6 +18,10 @@ export class PizzaComponent implements OnInit {
 
   availableToppings: PizzaToppingDisplay[];
   total = 0;
+  get showWarning() {
+    //return this.availableToppings.filter(x => x.checked).length === 0;
+    return !this.availableToppings.some(x => x.checked);
+  }
 
   ngOnInit() {
     this.availableToppings = this.pizzaSvc.loadPizzaToppings();

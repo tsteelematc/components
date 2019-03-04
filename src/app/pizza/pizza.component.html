@@ -5,6 +5,7 @@
   </p>
   <p>
     <button (click)='calculateTotal()'>Calculate Total</button>
+    &nbsp;<span style="color: red;" *ngIf="showWarning">Don't forget to choose your toppings...</span>
   </p>
   <h3>Total: {{ total | currency }}</h3>
 </div>
