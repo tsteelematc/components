@@ -3,4 +3,10 @@
     <input type="checkbox" [(ngModel)]="topping.checked">
     {{topping.name}}: {{topping.price | currency}}
   </p>
+  <p>
+    <button (click)="calculateTotal()">Calculate Total</button>
+  </p>
+  <h3>
+    {{ total | currency }}
+  </h3>
 </div>
