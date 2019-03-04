@@ -13,8 +13,15 @@ interface PizzaToppingDisplay{
 export class PizzaComponent implements OnInit {
 
   avaiablePizzaToppings: PizzaToppingDisplay[];
-  total: number;
+  // total: number = 0;
+  total = 0;
 
+  calculateTotal = () => {
+      this.total = this.avaiablePizzaToppings
+      .filter(x => x.checked)
+      .reduce(
+          (acc, x) => acc+ x.price
+      , 0)}
   // DI (denendecy inject) the pizza service.
   constructor(public pizzaSvc: PizzaService) { }
 
