@@ -9,8 +9,8 @@ export class PizzaService {
 
   public loadPizzaToppings() {
     const pizzaToppingsFromWebService = [
-      {name: 'Pepperoni', prince: 1.50},
-      {name: 'Olives', prince: 2.50},
+      {name: 'Pepperoni', price: 1.50},
+      {name: 'Olives', price: 2.50},
     ];
 
     return pizzaToppingsFromWebService.map(x =>({
