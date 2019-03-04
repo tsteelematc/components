@@ -15,12 +15,15 @@ interface PizzaToppingDisplay {
 export class PizzaComponent implements OnInit {
   
   availablePizzaToppings: PizzaToppingDisplay[];
-  total: number;
-  
+  total = 0;
+
+  calculateTotal = () => {
+    this.total = this.availablePizzaToppings
+    .filter(x=>x.checked)
+    .reduce((acc, x) => acc + x.price, 0);
+  }
   // Dependency inject the pizza service by specifying the service variable in the constructor of the component
   constructor(public pizzaSvc: PizzaService) { }
-
-  
 
   ngOnInit() {
     // use the pizza service to load available pizza toppings
