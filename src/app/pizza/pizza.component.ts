@@ -13,6 +13,7 @@ interface PizzaToppingDisplay{
 export class PizzaComponent implements OnInit {
 
   avaiablePizzaToppings: PizzaToppingDisplay[];
+  total: number;
 
   // DI (denendecy inject) the pizza service.
   constructor(public pizzaSvc: PizzaService) { }
