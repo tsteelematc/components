@@ -13,6 +13,9 @@ export class PizzaService {
       , { name: 'Olives', price: 1.75 }
     ];
 
-    return pizzaToppings.map(x => ({...x, checked: false}));
+    return pizzaToppings.map(x => ({
+      ...x
+      , checked: false
+    }));
   }
 }
