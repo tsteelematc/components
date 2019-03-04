@@ -1,3 +1,6 @@
 <div>
-  <p *ngFor="let topping of availableToppings">{{topping.name}}: {{topping.price | currency}}</p>
+  <p *ngFor="let topping of availableToppings">
+    <input type="checkbox" [(ngModel)]="topping.checked">
+    {{topping.name}}: {{topping.price | currency}}
+  </p>
 </div>
