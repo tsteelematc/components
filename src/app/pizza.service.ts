@@ -8,9 +8,11 @@ export class PizzaService {
   constructor() { }
 
   public loadPizzaToppings() {
-    const pizzaToppingsFromWebService = [
+    const pizzaToppings = [
       { name: 'Pepperoni', price: 1.50 }
-      , { name: '', price: }
+      , { name: 'Olives', price: 1.75 }
     ];
+
+    return pizzaToppings.map(x => ({...x, checked: false}));
   }
 }
