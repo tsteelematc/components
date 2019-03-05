@@ -1,10 +1,10 @@
 <div>
   <h2>Tom's Addition Component</h2>
-  <input type="text">
+  <input type="number" [(ngModel)]='numberOne'>
   +
-  <input type="text">
+  <input type="number" [(ngModel)]='numberTwo'>
   &nbsp;
-  <button>=</button>
+  <button (click)='addNumbers()'>=</button>
   &nbsp;
-  answer ! ! !
+  {{ answer }}
 </div>

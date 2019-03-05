@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TjsAdditionComponent implements OnInit {
 
+  numberOne = 2;
+  numberTwo = 2;
+  answer = 4;
+
+  addNumbers = () => {
+    this.answer = this.numberOne + this.numberTwo;
+  }
+
   constructor() { }
 
   ngOnInit() {
