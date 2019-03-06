@@ -13,7 +13,6 @@ interface PizzaToppingDisplay {
   styleUrls: ['./pizza.component.css']
 })
 export class PizzaComponent implements OnInit {
-
   availablePizzaToppings: PizzaToppingDisplay[];
   total = 0;
 
@@ -39,6 +38,13 @@ export class PizzaComponent implements OnInit {
   uncheckAll = () => {
     this.availablePizzaToppings = this.availablePizzaToppings.map(x => ({...x, checked: false}));
     this.recalculateTotal();
+  }
+
+  //typescript getter proterty or read only
+  get showWarning() {
+    // both return statements do the same thing
+    // return this.availablePizzaToppings.filter(x => x.checked).length === 0;
+    return !this.availablePizzaToppings.some(x => x.checked);
   }
 
   // DI (dependency inject) the pizza service.
