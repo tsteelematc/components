@@ -26,6 +26,10 @@ export class PizzaComponent implements OnInit {
     );
   }
 
+  recalculateTotal = () => {
+    this.calculateTotal();
+  }
+
   // DI (dependency inject) the pizza service.
   constructor(public pizzaSvc: PizzaService) { }
 
