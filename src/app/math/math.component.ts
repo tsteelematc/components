@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MathComponent implements OnInit {
 
+  numberOne = 0;
+  numberTwo = 0;
+
   constructor() { }
 
   ngOnInit() {
