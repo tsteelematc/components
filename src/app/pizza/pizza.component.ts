@@ -17,6 +17,7 @@ export class PizzaComponent implements OnInit {
   availablePizzaToppings: PizzaToppingDisplay[];
   total = 0;
   allChecked = false;
+  checkMessage = "Check all";
 
   calculateTotal = () => {
     this.total = this.availablePizzaToppings
@@ -36,10 +37,12 @@ export class PizzaComponent implements OnInit {
       this.availablePizzaToppings = this.availablePizzaToppings.map(x => ({...x, checked: false}));
       this.allChecked = false;
       this.calculateTotal();
+      this.checkMessage = "Check all";
     } else {
       this.availablePizzaToppings = this.availablePizzaToppings.map(x => ({...x, checked: true}));
       this.allChecked = true;
       this.calculateTotal();
+      this.checkMessage = "Uncheck all";
     }
   }
 

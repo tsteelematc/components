@@ -1,5 +1,5 @@
 <div>
-  <button (click)="checkAll()">Check all</button>
+  <button (click)="checkAll()">{{ checkMessage }}</button>
   <p *ngFor='let t of availablePizzaToppings'>
     <input type="checkbox" [(ngModel)]='t.checked' (change)="recalculateTotal()">
     {{ t.name }} ({{ t.price | currency }})
