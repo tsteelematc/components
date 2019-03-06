@@ -9,5 +9,6 @@
   </p>
   <h3>
     Total: {{ total | currency}}
+    <span *ngIf='showWarning' style="color:crimson; font-size: 0.7em">(Don't forget choose you pizza topping)</span>
   </h3>
 </div>
