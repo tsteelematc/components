@@ -1,7 +1,9 @@
 <p>
   mwh-does-athing works! 
   <br/>
-  <input type="text"> + 
+  <option *ngFor='let spell of spellBook' value="Spell">
+    <select>{{ spell.name }}</select>
+  </option>
   <input type="text">
   <button (click)='maths();'>Magic?</button>
 </p>

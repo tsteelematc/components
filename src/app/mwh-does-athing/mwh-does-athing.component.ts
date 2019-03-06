@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { SpellBookService } from '../spell-book.service';
+
+interface SpellBookDisplay {
+  name: string;
+  spellLevel: number;
+}
 
 @Component({
   selector: 'mwh-does-athing',
@@ -7,13 +13,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MwhDoesAThingComponent implements OnInit {
 
-  constructor() { }
+  spellBook: SpellBookDisplay[];
+
+  constructor(public spellSvc: SpellBookService) { }
 
   ngOnInit() {
+    this.spellBook = this.spellSvc.loadSpellBook();
+
   }
 
   maths = () => {
-    
+
   }
 
 }
