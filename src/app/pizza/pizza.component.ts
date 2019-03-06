@@ -40,6 +40,12 @@ export class PizzaComponent implements OnInit {
     this.recalculateTotal();
   }  
 
+  // TypeScript getter property (or readonly)
+  get showWarning() {
+    //return this.availablePizzaToppings.filter(x => x.checked).length === 0;
+    return !this.availablePizzaToppings.some(x => x.checked);
+  }
+
   // DI (dependency inject) the pizza service.
   constructor(public pizzaSvc: PizzaService) { }
 
