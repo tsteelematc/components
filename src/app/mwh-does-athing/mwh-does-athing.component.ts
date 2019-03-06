@@ -14,6 +14,8 @@ interface SpellBookDisplay {
 export class MwhDoesAThingComponent implements OnInit {
 
   spellBook: SpellBookDisplay[];
+  spellSave: 0;
+  spellToHit: 0;
 
   constructor(public spellSvc: SpellBookService) { }
 
@@ -22,8 +24,8 @@ export class MwhDoesAThingComponent implements OnInit {
 
   }
 
-  maths = () => {
-
+  magicDisplay = () => {
+      //this.spellSave = 10 + this.spellBook.something i guess?
   }
 
 }

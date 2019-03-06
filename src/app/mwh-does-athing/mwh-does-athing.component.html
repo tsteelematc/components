@@ -1,9 +1,10 @@
 <p>
   mwh-does-athing works! 
   <br/>
-  <option *ngFor='let spell of spellBook' value="Spell">
-    <select>{{ spell.name }}</select>
-  </option>
-  <input type="text">
-  <button (click)='maths();'>Magic?</button>
+  <select name="" id="">
+    <option *ngFor='let s of spellBook' value="{{ s.name }}}">{{ s.name }}</option>
+  </select>
+  <input type="text" placeholder="enter caster level">
+  <input type="text" placeholder="enter spell modifer">
+  <button (click)='magicDisplay();'>Magic?</button>
 </p>
