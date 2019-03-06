@@ -16,6 +16,7 @@ export class PizzaComponent implements OnInit {
 
   availablePizzaToppings: PizzaToppingDisplay[];
   total = 0;
+  allChecked = false;
 
   calculateTotal = () => {
     this.total = this.availablePizzaToppings
@@ -28,6 +29,18 @@ export class PizzaComponent implements OnInit {
 
   recalculateTotal = () => {
     this.calculateTotal();
+  }
+
+  checkAll = () => {
+    if (this.allChecked) {
+      this.availablePizzaToppings = this.availablePizzaToppings.map(x => ({...x, checked: false}));
+      this.allChecked = false;
+      this.calculateTotal();
+    } else {
+      this.availablePizzaToppings = this.availablePizzaToppings.map(x => ({...x, checked: true}));
+      this.allChecked = true;
+      this.calculateTotal();
+    }
   }
 
   // DI (dependency inject) the pizza service.
