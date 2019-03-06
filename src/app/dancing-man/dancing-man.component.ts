@@ -12,4 +12,8 @@ export class DancingManComponent implements OnInit {
   ngOnInit() {
   }
 
+  makeDance = () => {
+      
+  }
+
 }
