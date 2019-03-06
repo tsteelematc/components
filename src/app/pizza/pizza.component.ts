@@ -31,20 +31,19 @@ export class PizzaComponent implements OnInit {
   }
 
   checkAll = () => {
-    this.availablePizzaToppings = this.availablePizzaToppings.map(x => ({...x, checked: true}));
+    this.availablePizzaToppings = this.availablePizzaToppings.map(x => ({...x, checked: true }));
     this.recalculateTotal();
   }
 
   uncheckAll = () => {
-    this.availablePizzaToppings = this.availablePizzaToppings.map(x => ({...x, checked: false}));
+    this.availablePizzaToppings = this.availablePizzaToppings.map(x => ({...x, checked: false }));
     this.recalculateTotal();
-  }
+  }  
 
   // TypeScript getter property (or readonly)
   get showWarning() {
-    // return this.availablePizzaToppings.filter(x => x.checked).length === 0;
+    //return this.availablePizzaToppings.filter(x => x.checked).length === 0;
     return !this.availablePizzaToppings.some(x => x.checked);
-
   }
 
   // DI (dependency inject) the pizza service.
