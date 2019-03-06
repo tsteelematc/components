@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { PizzaComponent } from './pizza/pizza.component';
+import { SjsAdditionComponent } from './sjs-addition/sjs-addition.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PizzaComponent
+    PizzaComponent,
+    SjsAdditionComponent,
   ],
   imports: [
     BrowserModule
