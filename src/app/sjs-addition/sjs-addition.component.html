@@ -1,14 +1,14 @@
 <div>
     <h2>Sung's Addition Component</h2>
     (
-    <input type="text">
+    <input type="number" [(ngModel)]='firstNumber'>
     +
-    <input type="text">
+    <input type="number" [(ngModel)]='secondNumber'>
     )
     /
-    <input type="text">
+    <input type="number" [(ngModel)]='thirdNumber'>
     &nbsp;
-    <button>=</button>
+    <button (click)='addNumbers()'>=</button>
     &nbsp;
-    Get Average
+    {{ answer }}
   </div>
