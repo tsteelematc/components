@@ -9,5 +9,6 @@
   </p>
   <h3>
     {{ total | currency }}
+    <span *ngIf='showWarning' style='color: red; font-size: 0.7em;'></span>
   </h3>
 </div>
