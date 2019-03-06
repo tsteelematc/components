@@ -4,7 +4,7 @@
     {{ t.name }} ({{ t.price | currency }})
   </p>
   <p>
-    <button (click)='calculateTotal()'>Calculate Total</button>
+    <button *ngIf='false' (click)='calculateTotal()'>Calculate Total</button>
   </p>
   <h3>
     {{ total | currency}}
