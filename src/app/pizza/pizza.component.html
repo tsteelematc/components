@@ -1,6 +1,6 @@
 <div>
   <p *ngFor='let t of availablePizzaToppings'>
-    <input type="checkbox" [(ngModel)]='t.checked'>
+    <input type="checkbox" [(ngModel)]='t.checked' (change)='recalculateTotal()'>>
     {{ t.name }} ({{ t.price | currency }})
   </p>
   <p>
