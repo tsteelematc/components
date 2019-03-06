@@ -26,6 +26,20 @@ export class PizzaComponent implements OnInit {
     );
   }
 
+  recalculateTotal = () => {
+    this.calculateTotal();
+  }
+
+  checkAll = () => {
+    this.availablePizzaToppings = this.availablePizzaToppings.map(x => ({...x, checked: true}));
+    this.recalculateTotal();
+  }
+
+  uncheckAll = () => {
+    this.availablePizzaToppings = this.availablePizzaToppings.map(x => ({...x, checked: false}));
+    this.recalculateTotal();
+  }
+
   // DI (dependency inject) the pizza service.
   constructor(public pizzaSvc: PizzaService) { }
 
