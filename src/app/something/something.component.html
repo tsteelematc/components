@@ -1,15 +1,18 @@
-<div>
+<div style="font-family:'Lucida Sans', Verdana, sans-serif;">
   <h1>Adding with Colors</h1>
-  <input type="radio" name="firstColor" id="red"><span style="color:red; font-family: 'Lucida Sans', Verdana, sans-serif">red</span>
-  <input type="radio" name="firstColor" id="yellow"><span style="color:gold; font-family: 'Lucida Sans', Verdana, sans-serif">yellow</span>
-  <input type="radio" name="firstColor" id="blue"><span style="color:darkblue; font-family: 'Lucida Sans', Verdana, sans-serif">blue</span>
-  <br /><br />
-  <span style="font-family: 'Lucida Sans', Verdana, sans-serif; padding: 1.5em;">plus</span>
-  <br /><br />
-  <input type="radio" name="secondColor" id="red"><span style="color:red; font-family: 'Lucida Sans', Verdana, sans-serif">red</span>
-  <input type="radio" name="secondColor" id="yellow"><span style="color:gold; font-family: 'Lucida Sans', Verdana, sans-serif">yellow</span>
-  <input type="radio" name="secondColor" id="blue"><span style="color:darkblue; font-family: 'Lucida Sans', Verdana, sans-serif">blue</span>
-  <br /><br />
-  <button style="margin: 0 0.75em; font-family: 'Lucida Sans', Verdana, sans-serif">equals</button>
-  <br />
+  <input type="number" [(ngModel)]='firstNumber'>
+  plus
+  <input type="number" [(ngModel)]='secondNumber'>
+  <button (click)='addNumbers()'>=</button>
+  {{ result }}
+</div>
+<div>
+  <label ng-repeat='t in colors'>
+    <p *ngFor='let t of colors'>
+      <input type="checkbox" [(ngModel)]='t.checked'> 
+      {{ t.name }}
+    </p>
+  </label>
+    <button (click)='findColor()'>Find Color</button>
+    <p style="font-family:'Lucida Sans', Verdana, sans-serif;">{{ foundColor }}</p>
 </div>
