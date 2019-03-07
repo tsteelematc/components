@@ -4,13 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { PizzaComponent } from './pizza/pizza.component';
-import { SomethingsomethingComponent } from './somethingsomething/somethingsomething.component';
+import { SomethingComponent } from './something/something.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PizzaComponent,
-    SomethingsomethingComponent
+    SomethingComponent
   ],
   imports: [
     BrowserModule
