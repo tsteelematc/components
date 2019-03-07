@@ -1,5 +1,6 @@
 <div style="font-family:'Lucida Sans', Verdana, sans-serif;">
   <h1>Adding with Colors</h1>
+  <h3>Adding</h3>
   <input type="number" [(ngModel)]='firstNumber'>
   plus
   <input type="number" [(ngModel)]='secondNumber'>
@@ -7,12 +8,13 @@
   {{ result }}
 </div>
 <div>
+    <h3>Adding Colors</h3>
     <p *ngFor='let t of colors'>
     <label ng-repeat='t in colors'>
       <input type="checkbox" [(ngModel)]='t.checked'> 
       {{ t.name }}
     </label>
     </p>
-    <button (click)='findColor()'>Find Color</button>
+    <button (click)='findColor()'>Add Colors</button>
     <p style="font-family:'Lucida Sans', Verdana, sans-serif;">{{ foundColor }}</p>
 </div>
