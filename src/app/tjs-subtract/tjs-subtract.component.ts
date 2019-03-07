@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TjsSubtractComponent implements OnInit {
 
+  numberOne = 10;
+  numberTwo = 5;
+  answer = 5;
+  subtractNumbers = () => {
+    this.answer = this.numberOne - this.numberTwo;
+  }
+
   constructor() { }
 
   ngOnInit() {

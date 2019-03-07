@@ -1,8 +1,10 @@
 <div>
   <h3>Tom's Subtraction Component</h3>
-  <input type="number">
-  +
-  <input type="number">
-  <button>=</button>
-  answer
+  <input type="number" [(ngModel)]='numberOne'>
+  &nbsp; - &nbsp;
+  <input type="number" [(ngModel)]='numberTwo'>
+  &nbsp;
+  <button (click)='subtractNumbers()'>=</button>
+  &nbsp;
+  {{ answer }}
 </div>
