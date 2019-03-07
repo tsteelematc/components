@@ -8,8 +8,10 @@
 </div>
 <div>
     <p *ngFor='let t of colors'>
+    <label ng-repeat='t in colors'>
       <input type="checkbox" [(ngModel)]='t.checked'> 
       {{ t.name }}
+    </label>
     </p>
     <button (click)='findColor()'>Find Color</button>
     <p style="font-family:'Lucida Sans', Verdana, sans-serif;">{{ foundColor }}</p>
