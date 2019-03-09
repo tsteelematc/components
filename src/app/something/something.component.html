@@ -1,20 +1,19 @@
-<div style="font-family:'Lucida Sans', Verdana, sans-serif;">
-  <h1>Adding with Colors</h1>
-  <h3>Adding</h3>
+<div class="container">
+  <h1 class="mt-5">Adding with Colors</h1>
+  <h3 class="mt-3">Adding</h3>
   <input type="number" [(ngModel)]='firstNumber'>
   plus
   <input type="number" [(ngModel)]='secondNumber'>
-  <button (click)='addNumbers()'>=</button>
+  <button (click)='addNumbers()' class="btn btn-success ml-2">=</button>
   {{ result }}
-</div>
-<div>
-    <h3>Adding Colors</h3>
+  <br /><br />
+    <h3 class="mt-2">Adding Colors</h3>
     <p *ngFor='let t of colors'>
     <label ng-repeat='t in colors'>
       <input type="checkbox" [(ngModel)]='t.checked'> 
       {{ t.name }}
     </label>
     </p>
-    <button (click)='findColor()'>Add Colors</button>
-    <p style="font-family:'Lucida Sans', Verdana, sans-serif;">{{ foundColor }}</p>
+    <button (click)='findColor()' class="btn btn-outline-info">Add Colors</button>
+    <p class="mt-2">{{ foundColor }}</p>
 </div>
