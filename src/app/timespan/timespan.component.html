@@ -1,3 +1,6 @@
-<p>
-  timespan works!
-</p>
+<div>
+    <div>Starting Date<input type="date" [(ngModel)]="startingDate"></div>
+    <div>Ending Date<input type="date" [(ngModel)]="endingdate"></div>
+    <button type="button" (click)="calculateAge()">Calculate Age</button>
+    <div>Outcome: {{age}}</div>
+</div>

@@ -6,6 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./timespan.component.css']
 })
 export class TimespanComponent implements OnInit {
+  
+  startingDate;
+  endingDate;
+  age;
+
+  calculateAge = () => {
+    
+  }
 
   constructor() { }
 
