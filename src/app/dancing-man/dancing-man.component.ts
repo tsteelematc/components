@@ -8,12 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class DancingManComponent implements OnInit {
 
   constructor() { }
+  inputOne;
+  inputTwo;
+  answer;
+  
+  
 
   ngOnInit() {
   }
 
   makeDance = () => {
-      
+     this.answer =  this.inputOne + this.inputTwo;
   }
 
 }

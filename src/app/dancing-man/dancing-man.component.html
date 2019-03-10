@@ -1,20 +1,29 @@
+<h4>Dancing Man feels the beat different for evens and odds</h4>
 
+<div>
+<input type="number" [(ngModel)]='inputOne'><br/>
++<br/>
+<input type="number" [(ngModel)]='inputTwo'>
+<br/>
+{{answer}}
+<br/>
+<button (click)='makeDance()'>Make Dance</button>
+</div>
 
-<p *ngIf=dance1()>
+<p *ngIf="(answer % 2) == 0">
     (•_•)<br/>
     <)&nbsp;)╯<br/>
     &nbsp;/    \<br/>
     <br/>
 </p>
-<p *ngIf=dance2()>
+<p *ngIf="(answer % 2 != 0 && answer != null)">
     \(•_•)<br/>
     (&nbsp;(> <br/>
     &nbsp;/    \<br/>
     <br/>
 </p>
-<p *ngIf=dance3()>
-     (•_•)<br/>
-    <)&nbsp;)><br/>
-    /&nbsp; \<br/>
+<p *ngIf="(answer == null)">
+    (•_•)<br/>
+   <)&nbsp;)><br/>
+   /&nbsp; \<br/>
 </p>
-<button (click)='makeDance()'>Make Dance</button>
