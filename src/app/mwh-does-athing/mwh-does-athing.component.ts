@@ -14,8 +14,11 @@ interface SpellBookDisplay {
 export class MwhDoesAThingComponent implements OnInit {
 
   spellBook: SpellBookDisplay[];
-  spellSave: 0;
-  spellToHit: 0;
+  spellSave: number;
+  spellToHit: number;
+  level: number;
+  modifier: number;
+  
 
   constructor(public spellSvc: SpellBookService) { }
 
@@ -25,7 +28,9 @@ export class MwhDoesAThingComponent implements OnInit {
   }
 
   magicDisplay = () => {
-      //this.spellSave = 10 + this.spellBook.something i guess?
+      // this.spellSave = (10 + this.level + s.spellLevel);
+      this.spellToHit = (this.modifier);
+      
   }
 
 }
