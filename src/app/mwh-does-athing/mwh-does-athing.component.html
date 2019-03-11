@@ -1,12 +1,15 @@
 <p>
   mwh-does-athing works! 
   <br/>
-  <select name="" id="">
+  <select [(ngModel)]="spellCasted">
     <option *ngFor='let s of spellBook' value="{{ s.name }}}">{{ s.name }}</option>
   </select>
   <input type="number" placeholder="enter caster level" [(ngModel)]="level">
   <input type="number" placeholder="enter spell modifer" id="modifier" [(ngModel)]="modifier">
   <button (click)='magicDisplay();'>Magic?</button>
 
-  <!-- <p *ngFor= "let c of MwhDoesAThingComponent" > To Hit: {{c.spellToHit}} </p> -->
+  <br/>
+  To Hit: {{spellToHit}}
+  <br/>
+  Spell Save: {{spellSave}}
 </p>
