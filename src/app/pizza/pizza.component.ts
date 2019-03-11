@@ -16,6 +16,8 @@ export class PizzaComponent implements OnInit {
 
   availablePizzaToppings: PizzaToppingDisplay[];
   total = 0;
+  allChecked = false;
+  checkMessage = "Check all";
 
   calculateTotal = () => {
     this.total = this.availablePizzaToppings
