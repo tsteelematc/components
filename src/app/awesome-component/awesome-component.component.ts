@@ -12,4 +12,8 @@ export class AwesomeComponentComponent implements OnInit {
   ngOnInit() {
   }
 
+  generateMessage = () => {
+    
+  }
+
 }
