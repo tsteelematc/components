@@ -11,7 +11,7 @@ export class AwesomeComponentComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+
   generateMessage = () => {
     this.message = 'Ow!';
   }
