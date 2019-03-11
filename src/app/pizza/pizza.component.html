@@ -1,12 +1,16 @@
 <div>
+  <a (click)='checkAll()' href='#'>All</a> | <a (click)='uncheckAll()' href='#'>None</a>
   <p *ngFor='let t of availablePizzaToppings'>
-    <input type="checkbox" [(ngModel)]='t.checked'>
+    <input type="checkbox" [(ngModel)]='t.checked' (change)='recalculateTotal()'>
     {{ t.name }} ({{ t.price | currency }})
   </p>
   <p>
-    <button (click)='calculateTotal()'>Calculate Total</button>
+    <button *ngIf='false' (click)='calculateTotal()'>Calculate Total</button>
   </p>
   <h3>
-    {{ total | currency}}
+    Total: {{ total | currency}} 
+    <span *ngIf='showWarning' style='color: red; font-size: 0.7em'>(Don't forget to choose your toppings)</span>
   </h3>
+<p >
+ 
 </div>

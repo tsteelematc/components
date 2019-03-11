@@ -1,0 +1,10 @@
+<h1>Lucas' Messaging</h1>
+<form (ngSubmit)="prefix()">
+  <input type="text" [(ngModel)]="name" name="name" placeholder="Name">
+  <br>
+  <input type="text" [(ngModel)]="message" name="message" placeholder="Message">
+  <br>
+  <button>Send</button>
+  <br><br>
+  <span [innerHTML]="prefixed"></span>
+</form>
