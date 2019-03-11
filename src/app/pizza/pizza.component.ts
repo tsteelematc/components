@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PizzaService } from '../pizza.service';
+import { AbstractExtendedWebDriver } from 'protractor/built/browser';
 
 interface PizzaToppingDisplay {
   name: string;
