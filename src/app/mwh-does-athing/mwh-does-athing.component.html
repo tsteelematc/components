@@ -4,7 +4,7 @@
   <select name="" id="">
     <option *ngFor='let s of spellBook' value="{{ s.name }}}">{{ s.name }}</option>
   </select>
-  <input type="text" placeholder="enter caster level">
-  <input type="text" placeholder="enter spell modifer">
+  <input type="number" placeholder="enter caster level" id="level">
+  <input type="number" placeholder="enter spell modifer" id="modifier">
   <button (click)='magicDisplay();'>Magic?</button>
 </p>
