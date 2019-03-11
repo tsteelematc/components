@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PizzaService } from '../pizza.service';
+import { AbstractExtendedWebDriver } from 'protractor/built/browser';
 
 interface PizzaToppingDisplay {
   name: string;
@@ -53,6 +54,14 @@ export class PizzaComponent implements OnInit {
     // Use pizza service to load the available pizza toppings.
     // var svc = new PizzaService() : - (
     this.availablePizzaToppings = this.pizzaSvc.loadPizzaToppings();
+  }
+
+numberOne;
+numberTwo;
+answer;
+
+  calculateNumbers() {
+    this.answer = (this.numberOne * this.numberTwo) / 2;
   }
 
 }
