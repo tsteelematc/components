@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PizzaComponent } from './pizza/pizza.component';
 import { TjsSubtractComponent } from './tjs-subtract/tjs-subtract.component';
+import { TjsAdditionComponent } from './tjs-addition/tjs-addition.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PizzaComponent,
-    TjsSubtractComponent
+    TjsSubtractComponent,
+    TjsAdditionComponent
   ],
   imports: [
     BrowserModule
