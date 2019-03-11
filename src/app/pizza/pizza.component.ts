@@ -56,12 +56,4 @@ export class PizzaComponent implements OnInit {
     this.availablePizzaToppings = this.pizzaSvc.loadPizzaToppings();
   }
 
-numberOne;
-numberTwo;
-answer;
-
-  calculateNumbers() {
-    this.answer = (this.numberOne * this.numberTwo) / 2;
-  }
-
 }
