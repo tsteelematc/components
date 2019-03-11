@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { PizzaComponent } from './pizza/pizza.component';
+import { TimespanComponent } from './timespan/timespan.component';
 import { MathComponent } from './math/math.component';
 import { AwesomeComponentComponent } from './awesome-component/awesome-component.component';
 import { PrefixerComponent } from './prefixer/prefixer.component';
@@ -18,6 +19,7 @@ import { TjsAdditionComponent } from './tjs-addition/tjs-addition.component';
   declarations: [
     AppComponent,
     PizzaComponent,
+    TimespanComponent,
     MathComponent,
     AwesomeComponentComponent,
     PrefixerComponent,
