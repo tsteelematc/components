@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-tjs-subtract',
-  templateUrl: './tjs-subtract.component.html',
-  styleUrls: ['./tjs-subtract.component.css']
+  selector: 'app-avue-mulitplying',
+  templateUrl: './avue-mulitplying.component.html',
+  styleUrls: ['./avue-mulitplying.component.css']
 })
-export class TjsSubtractComponent implements OnInit {
+export class AvueMultiplyingComponent implements OnInit {
 
   numberOne;
   numberTwo;

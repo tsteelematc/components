@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TjsSubtractComponent } from './tjs-subtract.component';
+import { AvueMultiplyingComponent } from './avue-mulitplying.component';
 
-describe('TjsSubtractComponent', () => {
-  let component: TjsSubtractComponent;
-  let fixture: ComponentFixture<TjsSubtractComponent>;
+describe('AvueMultiplyingComponent', () => {
+  let component: AvueMultiplyingComponent;
+  let fixture: ComponentFixture<AvueMultiplyingComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TjsSubtractComponent ]
+      declarations: [ AvueMultiplyingComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TjsSubtractComponent);
+    fixture = TestBed.createComponent(AvueMultiplyingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
