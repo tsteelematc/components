@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DfsSubtractComponent implements OnInit {
 
+  numberOne = 10;
+  numberTwo = 5;
+  answer = 5;
   constructor() { }
 
   ngOnInit() {
