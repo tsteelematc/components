@@ -7,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MathComponent implements OnInit {
 
-  numberOne = 0;
-  numberTwo = 0;
+  numberOne = 2;
+  numberTwo = 3;
+  addTotal = 0;
+  totalNumbers;
 
   constructor() { }
+
+   addEqual = () => {
+    this.addTotal = this.numberOne + this.numberTwo;
+  }
 
   ngOnInit() {
   }
