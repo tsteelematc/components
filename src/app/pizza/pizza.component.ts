@@ -33,23 +33,18 @@ export class PizzaComponent implements OnInit {
   }
 
   checkAll = () => {
-    if (this.allChecked) {
-      this.availablePizzaToppings = this.availablePizzaToppings.map(x => ({...x, checked: false}));
-      this.allChecked = false;
-      this.calculateTotal();
-      this.checkMessage = "Check all";
-    } else {
-      this.availablePizzaToppings = this.availablePizzaToppings.map(x => ({...x, checked: true}));
-      this.allChecked = true;
-      this.calculateTotal();
-      this.checkMessage = "Uncheck all";
-    }
+    this.availablePizzaToppings = this.availablePizzaToppings.map(x => ({...x, checked: true }));
+    this.recalculateTotal();
   }
 
-  // Getter (typescript) property
+  uncheckAll = () => {
+    this.availablePizzaToppings = this.availablePizzaToppings.map(x => ({...x, checked: false }));
+    this.recalculateTotal();
+  }  
+
+  // TypeScript getter property (or readonly)
   get showWarning() {
-    // See below for simpler version
-    // return this.availablePizzaToppings.filter(x => x.checked).length == 0;
+    //return this.availablePizzaToppings.filter(x => x.checked).length === 0;
     return !this.availablePizzaToppings.some(x => x.checked);
   }
 
