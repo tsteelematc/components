@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { PizzaComponent } from './pizza/pizza.component';
+import { MwhDoesAThingComponent } from './mwh-does-athing/mwh-does-athing.component';
 import { TimespanComponent } from './timespan/timespan.component';
 import { MathComponent } from './math/math.component';
 import { AwesomeComponentComponent } from './awesome-component/awesome-component.component';
@@ -19,6 +20,7 @@ import { TjsAdditionComponent } from './tjs-addition/tjs-addition.component';
   declarations: [
     AppComponent,
     PizzaComponent,
+    MwhDoesAThingComponent,
     TimespanComponent,
     MathComponent,
     AwesomeComponentComponent,

@@ -1,0 +1,15 @@
+<p>
+  Cast some spells wizard! 
+  <br/>
+  <select [(ngModel)]="spellCasted">
+    <option *ngFor='let s of spellBook' value="{{ s.name }}}">{{ s.name }}</option>
+  </select>
+  <input type="number" placeholder="enter caster level" [(ngModel)]="level">
+  <input type="number" placeholder="enter spell modifer" id="modifier" [(ngModel)]="modifier">
+  <button (click)='magicDisplay();'>Magic?</button>
+
+  <br/>
+  To Hit: {{spellToHit}}
+  <br/>
+  Spell Save: {{spellSave}}
+</p>
