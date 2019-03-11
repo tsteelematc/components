@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { PizzaComponent } from './pizza/pizza.component';
+import { AvueMultiplyingComponent } from './avue-multiplying/avue-mulitplying.component';
 import { SomethingComponent } from './something/something.component';
 import { DancingManComponent } from './dancing-man/dancing-man.component';
 import { TjsSubtractComponent } from './tjs-subtract/tjs-subtract.component';
@@ -13,6 +14,7 @@ import { TjsAdditionComponent } from './tjs-addition/tjs-addition.component';
   declarations: [
     AppComponent,
     PizzaComponent,
+    AvueMultiplyingComponent,
     SomethingComponent,
     DancingManComponent,
     TjsSubtractComponent,
