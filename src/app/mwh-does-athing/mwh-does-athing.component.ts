@@ -14,11 +14,11 @@ interface SpellBookDisplay {
 export class MwhDoesAThingComponent implements OnInit {
 
   spellBook: SpellBookDisplay[];
-  spellCasted: string;
+  spellCasted: String;
   spellSave: number;
   spellToHit: number;
-  spellLevel
-  level: number;
+  spellLevel: number;
+  casterLevel: number;
   modifier: number;
   
 
@@ -32,16 +32,20 @@ export class MwhDoesAThingComponent implements OnInit {
   magicDisplay = () => {
       // this.spellSave = (10 + this.level + s.spellLevel);
       
-      this.spellBook = this.spellBook
-      .filter(x => x.name = this.spellCasted);    
-      
-      this.spellLevel = this.spellBook.reduce(
-        (acc, x) => acc + x.spellLevel
-        , 0
-      );
+      console.log(this.spellCasted);
+      // this.spellLevel = this.spellCasted.spellLevel;
+    
+      this.spellLevel = this.spellBook
+        .filter(x => x.name == this.spellCasted)    
+        .reduce(
+          (acc, x) => acc + x.spellLevel
+          , 0
+        );
+
+        console.log(this.spellLevel);
       
       this.spellToHit = (this.modifier);
-      this.spellSave = (10 + (this.level / 2) + this.spellLevel); 
+      this.spellSave = (10 + (this.casterLevel / 2) + this.spellLevel); 
       
   }
 

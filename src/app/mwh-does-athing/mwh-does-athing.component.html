@@ -1,15 +1,30 @@
-<p>
-  Cast some spells wizard! 
-  <br/>
-  <select [(ngModel)]="spellCasted">
-    <option *ngFor='let s of spellBook' value="{{ s.name }}}">{{ s.name }}</option>
-  </select>
-  <input type="number" placeholder="enter caster level" [(ngModel)]="level">
-  <input type="number" placeholder="enter spell modifer" id="modifier" [(ngModel)]="modifier">
-  <button (click)='magicDisplay();'>Magic?</button>
-
-  <br/>
-  To Hit: {{spellToHit}}
-  <br/>
-  Spell Save: {{spellSave}}
-</p>
+<mat-card>
+  <mat-card-title>
+    Cast some spells wizard!
+  </mat-card-title>
+  
+  <mat-card-content>
+    <mat-form-field>
+      <mat-select [(ngModel)]="spellCasted">
+        <mat-option *ngFor='let s of spellBook' value="{{s.name}}">{{ s.name }}</mat-option>
+      </mat-select>  
+    </mat-form-field>
+     
+    <mat-form-field>
+        <input matInput type="Number" placeholder="enter caster level" [(ngModel)]="casterLevel">
+    </mat-form-field>
+    
+    <mat-form-field>
+       <input matInput type="Number" placeholder="enter spell modifer" id="modifier" [(ngModel)]="modifier">
+    </mat-form-field>
+    
+    <button mat-raised-button  (click)='magicDisplay();'>Magic?</button>
+    
+    <br/><br/>
+    To Hit: {{spellToHit}}
+    <br/>
+    Spell Save: {{spellSave}}
+  
+  </mat-card-content>
+  
+</mat-card>
