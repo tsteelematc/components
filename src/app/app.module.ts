@@ -20,7 +20,10 @@ import { DfsSubtractComponent } from './dfs-subtract/dfs-subtract.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule
         , MatButtonModule
-        , MatCheckboxModule } from '@angular/material';
+        , MatCheckboxModule 
+        , MatFormFieldModule
+        , MatInputModule} from '@angular/material';
+import { FlexLayoutModule} from '@angular/flex-layout';        
 
 @NgModule({
   declarations: [
@@ -47,6 +50,9 @@ import { MatCardModule
     , MatCardModule
     , MatButtonModule
     , MatCheckboxModule
+    , MatFormFieldModule
+    , MatInputModule
+    , FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
