@@ -1,4 +1,17 @@
-<h4>Worst Component</h4>
-<input type='text' name='firstNum' placeholder='First Number' [(ngModel)]='numberOne' /> x <input type='text' name='secondNum' placeholder="Second Number" [(ngModel)]='numberTwo' />
-<button (click)='calculateNumbers()'>/ 2 =</button>
-{{answer}}
+<mat-card>
+    <mat-card-title>
+        The Worst Component There Ever Was
+    </mat-card-title>
+    <mat-card-content>
+        <img src='../../assets/ok-hand-sign.png' height='64' width='48' />
+        <mat-form-field>
+            <input matInput placeholder='First Number' type='number' [(ngModel)]='numberOne' />
+        </mat-form-field>
+         x
+        <mat-form-field>
+            <input matInput placeholder='Second Number' [(ngModel)]='numberTwo' type='number' />
+        </mat-form-field>
+        <button matButton (click)='calculateNumbers()'>/ 2 =</button>
+        {{answer}}
+    </mat-card-content>
+</mat-card>
