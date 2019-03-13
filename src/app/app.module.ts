@@ -20,6 +20,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule
         , MatButtonModule
         , MatCheckboxModule 
+        , MatFormFieldModule
+        , MatInputModule
       }from '@angular/material';
 
 
@@ -47,6 +49,8 @@ import {MatCardModule
     ,  MatCardModule
     , MatButtonModule
     , MatCheckboxModule
+    , MatFormFieldModule
+    , MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
