@@ -22,7 +22,8 @@ import { MatCardModule
         , MatButtonModule
         , MatCheckboxModule 
         , MatFormFieldModule
-        , MatInputModule} from '@angular/material';
+        , MatInputModule
+        , MatDatepickerModule} from '@angular/material';
 import { FlexLayoutModule} from '@angular/flex-layout';        
 
 @NgModule({
@@ -53,6 +54,7 @@ import { FlexLayoutModule} from '@angular/flex-layout';
     , MatFormFieldModule
     , MatInputModule
     , FlexLayoutModule
+    , MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
