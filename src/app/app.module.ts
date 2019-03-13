@@ -16,6 +16,7 @@ import { SomethingComponent } from './something/something.component';
 import { DancingManComponent } from './dancing-man/dancing-man.component';
 import { TjsSubtractComponent } from './tjs-subtract/tjs-subtract.component';
 import { TjsAdditionComponent } from './tjs-addition/tjs-addition.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { TjsAdditionComponent } from './tjs-addition/tjs-addition.component';
   ],
   imports: [
     BrowserModule
-    , FormsModule
+    , FormsModule, BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
