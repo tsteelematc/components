@@ -17,6 +17,9 @@ import { DancingManComponent } from './dancing-man/dancing-man.component';
 import { TjsSubtractComponent } from './tjs-subtract/tjs-subtract.component';
 import { TjsAdditionComponent } from './tjs-addition/tjs-addition.component';
 import { DfsSubtractComponent } from './dfs-subtract/dfs-subtract.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule
+        , MatButtonModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,9 @@ import { DfsSubtractComponent } from './dfs-subtract/dfs-subtract.component';
   imports: [
     BrowserModule
     , FormsModule
+    , BrowserAnimationsModule
+    , MatCardModule
+    , MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
