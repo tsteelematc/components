@@ -5,8 +5,9 @@
   <mat-card-content>
       <button mat-button (click)='checkAll()'>All</button> | <button mat-button (click)='uncheckAll()'>None</button>
       <p *ngFor='let t of availablePizzaToppings'>
-        <input type="checkbox" [(ngModel)]='t.checked' (change)='recalculateTotal()'>
-        {{ t.name }} ({{ t.price | currency }})
+        <mat-checkbox [(ngModel)]='t.checked' (change)='recalculateTotal()'>
+          {{ t.name }} ({{ t.price | currency }})
+        </mat-checkbox> 
       </p>
       <p>
         <button *ngIf='false' (click)='calculateTotal()'>Calculate Total</button>
