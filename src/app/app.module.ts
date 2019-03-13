@@ -16,11 +16,14 @@ import { SomethingComponent } from './something/something.component';
 import { DancingManComponent } from './dancing-man/dancing-man.component';
 import { TjsSubtractComponent } from './tjs-subtract/tjs-subtract.component';
 import { TjsAdditionComponent } from './tjs-addition/tjs-addition.component';
+import { DfsSubtractComponent } from './dfs-subtract/dfs-subtract.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PizzaComponent,
+    TjsAdditionComponent,
+    DfsSubtractComponent,
     WorstComponent,
     MwhDoesAThingComponent,
     TimespanComponent,
@@ -31,8 +34,7 @@ import { TjsAdditionComponent } from './tjs-addition/tjs-addition.component';
     AvueMultiplyingComponent,
     SomethingComponent,
     DancingManComponent,
-    TjsSubtractComponent,
-    TjsAdditionComponent
+    TjsSubtractComponent
   ],
   imports: [
     BrowserModule

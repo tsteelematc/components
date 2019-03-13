@@ -13,6 +13,8 @@ export class AwesomeComponentComponent implements OnInit {
   }
   message = "";
 
+  message = "";
+  
   generateMessage = () => {
     this.message = 'Ow!';
   }
