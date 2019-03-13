@@ -1,8 +1,12 @@
-<div>
-  <h4>Derek's Subtraction Component</h4>
-  <input type="number" [(ngModel)]='numberOne'>
+<mat-card>
+  <mat-card-title>Derek's Subtraction Component</mat-card-title>
+  <mat-form-field>
+    <input matInput type="number" [(ngModel)]='numberOne'>
+  </mat-form-field>
   -
-  <input type="number" [(ngModel)]='numberTwo'>
+  <mat-form-field>
+    <input matInput type="number" [(ngModel)]='numberTwo'>
+  </mat-form-field>
   <button (click)='subtractNumbers()'>=</button>
   {{ answer }}
-</div>
+</mat-card>
