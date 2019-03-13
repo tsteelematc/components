@@ -1,14 +1,18 @@
-<div>
-    <h2>Sung's Addition Component</h2>
+<mat-card>
+    <mat-card-title>Sung's Average Component</mat-card-title>
+    <mat-form-field>
     (
     <input type="number" [(ngModel)]='firstNumber'>
+    </mat-form-field>
     +
+    <mat-form-field>
     <input type="number" [(ngModel)]='secondNumber'>
     )
     /
     <input type="number" [(ngModel)]='thirdNumber'>
+    </mat-form-field>
     &nbsp;
     <button (click)='addNumbers()'>=</button>
     &nbsp;
     {{ answer }}
-  </div>
+</mat-card>
