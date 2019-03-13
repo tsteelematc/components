@@ -18,7 +18,8 @@ import { TjsSubtractComponent } from './tjs-subtract/tjs-subtract.component';
 import { TjsAdditionComponent } from './tjs-addition/tjs-addition.component';
 import { DfsSubtractComponent } from './dfs-subtract/dfs-subtract.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule} from '@angular/material'
+import { MatCardModule, MatButtonModule, MatCheckboxModule} from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -40,8 +41,12 @@ import { MatCardModule} from '@angular/material'
   ],
   imports: [
     BrowserModule
-    , FormsModule, BrowserAnimationsModule
+    , FormsModule
+    , BrowserAnimationsModule
     , MatCardModule
+    , MatButtonModule
+    , MatCheckboxModule
+    , FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
