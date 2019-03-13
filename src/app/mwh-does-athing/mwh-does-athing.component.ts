@@ -17,7 +17,7 @@ export class MwhDoesAThingComponent implements OnInit {
   spellCasted: string;
   spellSave: number;
   spellToHit: number;
-  spellLevel
+  spellLevel: number;
   level: number;
   modifier: number;
   
@@ -32,10 +32,9 @@ export class MwhDoesAThingComponent implements OnInit {
   magicDisplay = () => {
       // this.spellSave = (10 + this.level + s.spellLevel);
       
-      this.spellBook = this.spellBook
-      .filter(x => x.name = this.spellCasted);    
-      
-      this.spellLevel = this.spellBook.reduce(
+      this.spellLevel = this.spellBook
+      .filter(x => x.name = this.spellCasted)    
+      .reduce(
         (acc, x) => acc + x.spellLevel
         , 0
       );
