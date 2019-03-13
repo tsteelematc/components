@@ -1,10 +1,18 @@
-<h1>Lucas' Messaging</h1>
-<form (ngSubmit)="prefix()">
-  <input type="text" [(ngModel)]="name" name="name" placeholder="Name">
-  <br>
-  <input type="text" [(ngModel)]="message" name="message" placeholder="Message">
-  <br>
-  <button>Send</button>
-  <br><br>
-  <span [innerHTML]="prefixed"></span>
-</form>
+<mat-card>
+  <mat-card-title>Lucas' Messaging</mat-card-title>
+  <mat-card-content>
+    <form (ngSubmit)="prefix()">
+      <mat-form-field>
+        <input matInput type="text" [(ngModel)]="name" name="name" placeholder="Name">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input matInput type="text" [(ngModel)]="message" name="message" placeholder="Message">
+      </mat-form-field>
+      <br>
+      <button mat-button>Send</button>
+      <br><br>
+      <span [innerHTML]="prefixed"></span>
+    </form>
+  </mat-card-content>
+</mat-card>
