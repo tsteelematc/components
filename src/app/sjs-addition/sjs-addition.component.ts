@@ -6,19 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sjs-addition.component.css']
 })
 export class SjsAdditionComponent implements OnInit {
-
-  firstNumber = 4;
-  secondNumber = 4;
-  thirdNumber = 2;
-  answer = 4;
+    firstNumber;
+    secondNumber;
+    thirdNumber;
+    answer;
 
   addNumbers = () => {
     this.answer = (this.firstNumber + this.secondNumber) / this.thirdNumber;
   }
 
-  constructor() { }
+  constructor() { }    
 
   ngOnInit() {
   }
+
+  
 
 }

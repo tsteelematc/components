@@ -1,14 +1,20 @@
-<div>
-    <h2>Sung's Addition Component</h2>
-    (
-    <input type="number" [(ngModel)]='firstNumber'>
+<mat-card>
+    <mat-card-title>Sung's Average Component</mat-card-title>
+    <label for="">(</label>
+    <mat-form-field>
+    <input matInput placeholder='First Number' type="number" [(ngModel)]='firstNumber'>
+    </mat-form-field>
     +
-    <input type="number" [(ngModel)]='secondNumber'>
-    )
+    <mat-form-field>
+    <input matInput placeholder='Second Number' type="number" [(ngModel)]='secondNumber'>
+    </mat-form-field>
+    <label for="">)</label>
     /
-    <input type="number" [(ngModel)]='thirdNumber'>
+    <mat-form-field>
+    <input matInput placeholder='Third Number' type="number" [(ngModel)]='thirdNumber'>
+    </mat-form-field>
     &nbsp;
-    <button (click)='addNumbers()'>=</button>
+    <button mat-fab (click)='addNumbers()'>Click!</button>
     &nbsp;
     {{ answer }}
-  </div>
+</mat-card>
