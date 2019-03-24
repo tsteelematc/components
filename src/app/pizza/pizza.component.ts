@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PizzaService } from '../pizza.service';
+import { AbstractExtendedWebDriver } from 'protractor/built/browser';
 
 interface PizzaToppingDisplay {
   name: string;
@@ -16,6 +17,8 @@ export class PizzaComponent implements OnInit {
 
   availablePizzaToppings: PizzaToppingDisplay[];
   total = 0;
+  allChecked = false;
+  checkMessage = "Check all";
 
   calculateTotal = () => {
     this.total = this.availablePizzaToppings

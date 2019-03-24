@@ -1,10 +1,14 @@
-<div>
-  <h3>Tom's Subtraction Component</h3>
-  <input type="number" [(ngModel)]='numberOne'>
-  &nbsp; - &nbsp;
-  <input type="number" [(ngModel)]='numberTwo'>
+<mat-card>
+  <mat-card-title>Tom's Subtraction Component</mat-card-title>
+  <mat-form-field>
+      <input matInput placeholder='Number 1' type="number" [(ngModel)]='numberOne'>
+  </mat-form-field>
+  -
+  <mat-form-field>
+      <input matInput placeholder='Number 2' type="number" [(ngModel)]='numberTwo'>
+  </mat-form-field>
   &nbsp;
-  <button (click)='subtractNumbers()'>=</button>
+  <button mat-raised-button (click)='subtractNumbers()'>=</button>
   &nbsp;
   {{ answer }}
-</div>
+</mat-card>

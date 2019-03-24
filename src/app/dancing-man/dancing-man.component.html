@@ -1,13 +1,21 @@
-<h4>Dancing Man feels the beat different for evens and odds</h4>
+<mat-card>
+<mat-card-title>Dancing Man feels the beat different for evens and odds</mat-card-title>
 
 <div>
-<input type="number" [(ngModel)]='inputOne'><br/>
+<mat-form-field>
+    <input matInput type="number" placeholder="Number 1" [(ngModel)]='inputOne'><br/>
+</mat-form-field>
+<br/>
 +<br/>
-<input type="number" [(ngModel)]='inputTwo'>
+<mat-form-field>
+    <input matInput type="number" placeholder="Number 2" [(ngModel)]='inputTwo'>
+</mat-form-field>
 <br/>
+<mat-card-content>
 {{answer}}
-<br/>
-<button (click)='makeDance()'>Make Dance</button>
+</mat-card-content>
+
+<button  mat-raised-button color="primary" (click)='makeDance()'>Make Dance</button>
 </div>
 
 <p *ngIf="(answer % 2) == 0">
@@ -27,3 +35,4 @@
    <)&nbsp;)><br/>
    /&nbsp; \<br/>
 </p>
+</mat-card>

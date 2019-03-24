@@ -1,0 +1,19 @@
+<div style="background:grey">
+    <h2 style="color:turquoise">This is Math!</h2>
+    <!-- <p *ngFor='let v of addEqual'> -->
+        <input type="number" [(ngModel)]='numberOne'> + 
+        <input type="number" [(ngModel)]='numberTwo'> 
+        <button (click)='addEqual()'>=</button> 
+        <span>{{ totalNumbers }}</span>
+    <!-- </p> [(ngModel)]='totalNumbers' -->
+    <br>
+    <input type="number" [(ngModel)]='squNumber'> √2
+        <!-- <input type="number" [(ngModel)]='numberTwo'>  -->
+        <button (click)='squareEqual()'>=</button> 
+        <span>{{ squTotal }}</span>
+    <br>
+    <input type="number" [(ngModel)]='powOne'> ^
+        <input type="number" [(ngModel)]='powTwo'> 
+        <button (click)='powerEqual()'>=</button> 
+        <span>{{ powTotal }}</span>
+</div>
