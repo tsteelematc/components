@@ -9,7 +9,7 @@
     <mat-form-field>
       <input matInput type="number" [(ngModel)]='secondNumber'>
     </mat-form-field>
-    <button mat-button (click)='addNumbers()' class="btn btn-success ml-2">=</button>
+    <button mat-fab (click)='addNumbers()' class="btn btn-success ml-2">=</button>
     {{ result }}
     <br /><br />
       <h3 class="mt-2">Adding Colors</h3>
@@ -20,7 +20,7 @@
         </mat-checkbox>
       </label>
       </p>
-      <button mat-button (click)='findColor()' class="btn btn-outline-info">Add Colors</button>
+      <button mat-stroked-button (click)='findColor()' class="btn btn-outline-info">Add Colors</button>
       <p class="mt-2">{{ foundColor }}</p>
   </mat-card-content>
 </mat-card>
