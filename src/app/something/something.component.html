@@ -1,19 +1,26 @@
 <mat-card>
-  <h1 class="mt-5">Adding with Colors</h1>
-  <h3 class="mt-3">Adding</h3>
-  <input type="number" [(ngModel)]='firstNumber'>
-  plus
-  <input type="number" [(ngModel)]='secondNumber'>
-  <button (click)='addNumbers()' class="btn btn-success ml-2">=</button>
-  {{ result }}
-  <br /><br />
-    <h3 class="mt-2">Adding Colors</h3>
-    <p *ngFor='let t of colors'>
-    <label ng-repeat='t in colors'>
-      <input type="checkbox" [(ngModel)]='t.checked'> 
-      {{ t.name }}
-    </label>
-    </p>
-    <button (click)='findColor()' class="btn btn-outline-info">Add Colors</button>
-    <p class="mt-2">{{ foundColor }}</p>
+  <mat-card-title>Adding with Colors</mat-card-title>
+  <mat-card-content>
+    <h3 class="mt-3">Adding</h3>
+    <mat-form-field>
+      <input matInput type="number" [(ngModel)]='firstNumber'>
+    </mat-form-field>
+    plus
+    <mat-form-field>
+      <input matInput type="number" [(ngModel)]='secondNumber'>
+    </mat-form-field>
+    <button mat-button (click)='addNumbers()' class="btn btn-success ml-2">=</button>
+    {{ result }}
+    <br /><br />
+      <h3 class="mt-2">Adding Colors</h3>
+      <p *ngFor='let t of colors'>
+      <label ng-repeat='t in colors'>
+        <mat-checkbox [(ngModel)]='t.checked'> 
+        {{ t.name }}
+        </mat-checkbox>
+      </label>
+      </p>
+      <button mat-button (click)='findColor()' class="btn btn-outline-info">Add Colors</button>
+      <p class="mt-2">{{ foundColor }}</p>
+  </mat-card-content>
 </mat-card>
